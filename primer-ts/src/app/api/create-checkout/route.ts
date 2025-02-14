@@ -2,12 +2,12 @@ import { NextResponse } from 'next/server'
 import { Stripe } from 'stripe'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-01-27.acacia',
+  apiVersion: '2023-10-16',
 })
 
-const BASE_PRICE = 59 // Starting price in dollars
-const PRICE_INCREMENT = 10 // Price increase per 10 purchases
-const MAX_PRICE = 200 // Maximum price cap
+const BASE_PRICE = 5900 // Starting price in cents ($59.00)
+const PRICE_INCREMENT = 1000 // Price increase in cents ($10.00)
+const MAX_PRICE = 20000 // Maximum price in cents ($200.00)
 const INCREMENT_INTERVAL = 10 // Number of purchases before price increases
 
 // This would normally come from your database
@@ -19,7 +19,7 @@ function calculatePrice(count: number): number {
   return Math.min(calculatedPrice, MAX_PRICE)
 }
 
-export async function GET() {
+export async function POST() {
   try {
     const currentPrice = calculatePrice(purchaseCount)
     
@@ -30,11 +30,8 @@ export async function GET() {
         {
           price_data: {
             currency: 'usd',
-            product_data: {
-              name: 'Vibe Coding Course Pre-order',
-              description: 'Early access to the complete Vibe Coding video course',
-            },
-            unit_amount: currentPrice * 100, // Stripe uses cents
+            product: 'prod_RlxGkHvCmgRN88', // Your existing product ID
+            unit_amount: currentPrice,
           },
           quantity: 1,
         },
@@ -42,6 +39,8 @@ export async function GET() {
       mode: 'payment',
       success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+      allow_promotion_codes: true,
+      expires_at: Math.floor(Date.now() / 1000) + 3600, // Expires in 1 hour
     })
 
     return NextResponse.json({ url: session.url })

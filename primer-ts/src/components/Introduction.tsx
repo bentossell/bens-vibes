@@ -12,48 +12,49 @@ export function Introduction() {
     >
       <Container className="text-lg tracking-tight text-slate-700">
         <p className="font-display text-4xl font-bold tracking-tight text-slate-900">
-          What&apos;s included... coming soon (currently vibe coding this page)
-        </p>
-        {/* 
-        <p className="mt-4">
-          Before I learned how to build with AI, I always thought that creating software required years of coding experience, 
-          complex programming languages, and hours spent debugging mysterious errors.
+          What&apos;s included... 
         </p>
         <p className="mt-4">
-          But it turns out this isn't how modern builders work at all.
+          I was an OG no-coder - I started and sold a no-code education company (makerpad) - now I'm a vibe coder. I dont write code, I can't. Instead I rely on AI.
         </p>
         <p className="mt-4">
-          In "Vibe Coding", you'll learn the systems I use to create fully functional applications and tools, 
-          without writing a single line of code yourself.
+          This course is for a specific type of person. You can't code, or don't like to. You want to build stuff. The 'simplest' tools are still complicated once you're in the weeds.
+        </p>
+        <p className="mt-4">
+          I'm going to show you what I do. I learn't by seeing others do it. Nat Eliason's course I highly recommend.
+           This course is different. I'll show the web-based tools, the IDEs, the 'how to code system', 
+           how to get out of trouble, and more...
         </p>
         <ul role="list" className="mt-8 space-y-3">
           {[
-            'Using AI to turn your ideas into working code',
-            'How to structure your prompts for best results',
-            'Building full applications without writing code',
-            'Understanding basic concepts without getting technical',
-            'Tools and workflows to speed up your building process',
+            'Intro to vibe coding: Using AI to build projects without writing code',
+            'Project setup: Dependencies, Git, env variables & deployments',
+            'Navigating docs: Learn to use APIs and docs',
+            'Tool comparison: Explore coding tools (Cursor, Replit) vs simpler ones (Bolt, Lovable, Create)',
+            'Building Projects: Using the different tools out there',
+            'Debugging tips: Fix errors, escape endless loops, and troubleshoot with AI help',
+            'Open source projects: Clone existing projects and adapt them for your own use',
+            'Databases: Connect and work with databases using AI tools',
+            'Authentication basics: Set up user auth',
           ].map((feature) => (
             <li key={feature} className="flex">
-              <CheckIcon className="h-8 w-8 flex-none fill-[#cfc2f7]" />
+              <CheckIcon className="h-8 w-8 flex-none" />
               <span className="ml-4">{feature}</span>
             </li>
           ))}
         </ul>
         <p className="mt-8">
-          By the end of the course, you'll have all the confidence you need to start
-          building your own projects using AI, even if you've never written a line of code before.
+          You'll 100% have shipped something by the end of the course. I guarantee it. 
         </p>
         <p className="mt-10">
           <Link
-            href="#pricing"
+            href="/api/create-checkout"
             className="text-base font-medium text-[#cfc2f7] hover:text-[#cfc2f7]/80"
           >
-            Pre-order now and lock in the lowest price{' '}
+            Pre-order now. I'll release videos as they're ready. Price increases $10 every 10 purchases. Ben's Bites members get access free.
             <span aria-hidden="true">&rarr;</span>
           </Link>
         </p>
-        */}
       </Container>
     </section>
   )
