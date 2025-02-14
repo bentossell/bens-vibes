@@ -11,9 +11,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Everything Starts as a Square - Get lost in the world of icon design',
+  title: 'Vibe Coding - Learn to build with AI',
   description:
-    'A book and video course that teaches you how to design your own icons from scratch.',
+    'A video course that shows non-technical folks how to build with code without writing it. Using AI only to build projects.',
 }
 
 export default function RootLayout({

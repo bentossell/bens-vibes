@@ -58,7 +58,7 @@ export function Hero() {
               Learn vibe coding.
             </h1>
             <p className="mt-4 text-2xl text-slate-600">
-              A video course that shows non-technical folks how to build with code without writing it. Using AI only to build projects. I&apos;ll show you how I&apos;ve learnt to do it.
+              A video course that teaches you how to build with code without writing it - using AI only.
             </p>
             <p className="mt-2 text-l text-slate-600">
               by <a href="https://x.com/bentossell" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>

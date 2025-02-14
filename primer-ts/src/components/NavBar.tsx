@@ -1,7 +1,9 @@
 'use client'
 
+import Link from 'next/link'
+
 import { useEffect, useRef, useState } from 'react'
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
@@ -116,7 +118,7 @@ export function NavBar() {
                   </span>
                 </>
               )}
-              <PopoverButton
+              <Popover.Button
                 className={clsx(
                   '-mr-1 ml-auto flex h-8 w-8 items-center justify-center',
                   open && 'relative z-10',
@@ -130,11 +132,11 @@ export function NavBar() {
                   </>
                 )}
                 <MenuIcon open={open} className="h-6 w-6 stroke-slate-700" />
-              </PopoverButton>
+              </Popover.Button>
             </div>
-            <PopoverPanel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur-sm">
+            <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur-sm">
               {sections.map((section, sectionIndex) => (
-                <PopoverButton
+                <Popover.Button
                   as="a"
                   key={section.id}
                   href={`#${section.id}`}
@@ -149,9 +151,9 @@ export function NavBar() {
                   <span className="ml-4 text-base font-medium text-slate-900">
                     {section.title}
                   </span>
-                </PopoverButton>
+                </Popover.Button>
               ))}
-            </PopoverPanel>
+            </Popover.Panel>
             <div className="absolute inset-x-0 bottom-full z-10 h-4 bg-white" />
           </>
         )}
