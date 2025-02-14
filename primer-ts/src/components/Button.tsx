@@ -12,14 +12,14 @@ const variantStyles = {
   solid: {
     slate:
       'bg-slate-900 text-white hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-slate-900',
-    blue: 'bg-blue-600 text-white hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-blue-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-blue-600',
+    blue: 'bg-[#737ffc] text-white hover:bg-[#737ffc]/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#737ffc] active:bg-[#737ffc]/80 active:text-white/80 disabled:opacity-30 disabled:hover:bg-[#737ffc]',
     white:
-      'bg-white text-blue-600 hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600',
+      'bg-white text-[#737ffc] hover:text-[#737ffc]/90 focus-visible:text-[#737ffc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-[#737ffc]/10 active:text-[#737ffc]/80 disabled:opacity-40 disabled:hover:text-[#737ffc]',
   },
   outline: {
     slate:
       'border-slate-200 text-slate-900 hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 active:border-slate-200 active:bg-slate-50 active:text-slate-900/70 disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:bg-transparent',
-    blue: 'border-blue-300 text-blue-600 hover:border-blue-400 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:text-blue-600/70 disabled:opacity-40 disabled:hover:border-blue-300 disabled:hover:bg-transparent',
+    blue: 'border-[#737ffc]/30 text-[#737ffc] hover:border-[#737ffc]/40 hover:bg-[#737ffc]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#737ffc] active:text-[#737ffc]/70 disabled:opacity-40 disabled:hover:border-[#737ffc]/30 disabled:hover:bg-transparent',
   },
 }
 
