@@ -63,9 +63,11 @@ export function Hero() {
             <p className="mt-2 text-l text-slate-600">
               by <a href="https://x.com/bentossell" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>
             </p>
-            <p className="mt-4 px-4 py-2 bg-[#737ffc]/10 rounded-lg text-sm text-[#737ffc] font-medium">
-              Ben's Bites members get access free
-            </p>
+            <div className="mt-4 inline-block">
+              <span className="px-4 py-2 bg-[#737ffc]/10 rounded-lg text-sm text-[#737ffc] font-medium">
+                Ben's Bites members get access free
+              </span>
+            </div>
             <div className="mt-8 flex flex-col gap-4 max-w-xs">
               <Button
                 onClick={() => createCheckoutSession()}
