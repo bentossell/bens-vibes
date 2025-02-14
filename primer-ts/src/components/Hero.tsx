@@ -23,7 +23,7 @@ function Testimonial() {
         <strong className="font-semibold text-[#737ffc] before:content-['—_']">
           Andrej Karpathy
         </strong>
-        , Founder of Vibe Coding
+        , Pioneer of Vibe Coding
       </figcaption>
     </figure>
   )
@@ -62,6 +62,9 @@ export function Hero() {
             </p>
             <p className="mt-2 text-l text-slate-600">
               by <a href="https://x.com/bentossell" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>
+            </p>
+            <p className="mt-4 px-4 py-2 bg-[#737ffc]/10 rounded-lg text-sm text-[#737ffc] font-medium">
+              Ben's Bites members get access free
             </p>
             <div className="mt-8 flex flex-col gap-4 max-w-xs">
               <Button
