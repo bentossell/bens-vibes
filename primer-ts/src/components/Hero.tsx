@@ -16,7 +16,7 @@ function Testimonial() {
       </div>
       <blockquote className="mt-2">
         <p className="font-display text-xl font-medium text-slate-900">
-          "There's a new kind of coding I call "vibe coding", where you fully give in to the vibes, embrace exponentials, and forget that the code even exists"
+          &ldquo;There&apos;s a new kind of coding I call &ldquo;vibe coding&rdquo;, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists&rdquo;
         </p>
       </blockquote>
       <figcaption className="mt-2 text-sm text-slate-500">
@@ -58,7 +58,7 @@ export function Hero() {
               Learn vibe coding.
             </h1>
             <p className="mt-4 text-2xl text-slate-600">
-              A video course that shows non-technical folks how to build with code without writing it. Using AI only to build projects. I'll show you how I've learnt to do it.
+              A video course that shows non-technical folks how to build with code without writing it. Using AI only to build projects. I&apos;ll show you how I&apos;ve learnt to do it.
             </p>
             <p className="mt-2 text-l text-slate-600">
               by <a href="https://x.com/bentossell" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>
