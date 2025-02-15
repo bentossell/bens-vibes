@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Vibe Coding - Learn to build with AI',
   description:
     'A video course that shows non-technical folks how to build with code without writing it. Using AI only to build projects.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
