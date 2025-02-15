@@ -1,7 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 
 import { CheckIcon } from '@/components/CheckIcon'
 import { Container } from '@/components/Container'
+import { createCheckoutSession } from '@/lib/checkout'
 
 export function Introduction() {
   return (
@@ -48,8 +51,12 @@ export function Introduction() {
         </p>
         <p className="mt-10">
           <Link
-            href="/api/create-checkout"
-            className="text-base font-medium text-[#cfc2f7] hover:text-[#cfc2f7]/80"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              createCheckoutSession();
+            }}
+            className="text-base font-bold text-[#737ffc] hover:text-[#737ffc]/80 text-left block"
           >
             Pre-order now. I'll release videos as they're ready. Price increases $10 every 10 purchases. Ben's Bites members get access free.
             <span aria-hidden="true">&rarr;</span>
