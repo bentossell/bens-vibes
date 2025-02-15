@@ -61,11 +61,11 @@ export function Hero() {
               A video course that teaches you how to build with code without writing it - using AI only.
             </p>
             <p className="mt-2 text-l text-slate-600">
-              by <a href="https://x.com/bentossell" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>
+              by <a href="https://x.com/bentossell" target="_blank" className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">@bentossell</a>
             </p>
             <div className="mt-4 inline-block">
               <span className="px-4 py-2 bg-[#737ffc]/10 rounded-lg text-sm text-[#737ffc] font-medium">
-                Ben's Bites members get access free
+                <a href="https://bensbites.com" target="_blank"className="font-bold text-[#737ffc] hover:text-[#737ffc]/80">Ben's Bites</a> members get access free
               </span>
             </div>
             <div className="mt-8 flex flex-col gap-4 max-w-xs">
