@@ -1,4 +1,5 @@
 {
-  "outputDirectory": "primer-ts",
-  "rootDirectory": "primer-ts"
+  "buildCommand": "cd primer-ts && npm run build",
+  "installCommand": "cd primer-ts && npm install",
+  "outputDirectory": "primer-ts/.next"
 } 
