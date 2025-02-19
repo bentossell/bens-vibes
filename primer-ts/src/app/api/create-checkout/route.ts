@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-01-27.acacia',
 })
 
-const BASE_PRICE = 5900 // Starting price in cents ($59.00)
+const BASE_PRICE = 6900 // Starting price in cents ($69.00)
 const PRICE_INCREMENT = 1000 // Price increase in cents ($10.00)
 const MAX_PRICE = 20000 // Maximum price in cents ($200.00)
 const INCREMENT_INTERVAL = 10 // Number of purchases before price increases
