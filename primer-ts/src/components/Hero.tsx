@@ -6,7 +6,7 @@ import { Button } from '@/components/Button'
 import { GridPattern } from '@/components/GridPattern'
 import { StarRating } from '@/components/StarRating'
 import { createCheckoutSession } from '@/lib/checkout'
-import coverImage from '@/images/cover.png'
+import coverImage from '../images/cover.png'
 
 function Testimonial() {
   return (
@@ -72,8 +72,9 @@ export function Hero() {
               <Button
                 onClick={() => createCheckoutSession()}
                 color="blue"
+                className="relative"
               >
-                Pre-order now
+                <span>Pre-order now</span>
               </Button>
               <p className="text-sm text-slate-600">
                 Price increases $10 for every 10 pre-orders. 100% money-back guarantee.

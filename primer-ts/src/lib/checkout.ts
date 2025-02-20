@@ -1,5 +1,12 @@
 export async function createCheckoutSession() {
   try {
+    // Show loading state
+    const button = document.querySelector('button') as HTMLButtonElement;
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Loading...';
+    }
+
     const response = await fetch('/api/create-checkout', {
       method: 'POST',
       headers: {
@@ -9,23 +16,30 @@ export async function createCheckoutSession() {
     })
 
     if (!response.ok) {
-      throw new Error('Network response was not ok')
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const { url, error } = await response.json()
+    const data = await response.json();
 
-    if (error) {
-      throw new Error(error)
+    if (data.error) {
+      throw new Error(data.error);
     }
 
-    if (!url) {
-      throw new Error('No checkout URL received')
+    if (!data.url) {
+      throw new Error('No checkout URL received');
     }
 
     // Redirect to Stripe Checkout
-    window.location.href = url
+    window.location.href = data.url;
   } catch (error) {
-    console.error('Error:', error)
-    alert('Failed to create checkout session. Please try again.')
+    console.error('Error:', error);
+    alert('Failed to create checkout session. Please try again.');
+    
+    // Reset button state
+    const button = document.querySelector('button') as HTMLButtonElement;
+    if (button) {
+      button.disabled = false;
+      button.textContent = 'Pre-order now';
+    }
   }
 } 

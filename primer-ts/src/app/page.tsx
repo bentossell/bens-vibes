@@ -1,3 +1,5 @@
+'use client'
+
 import { Hero } from '@/components/Hero'
 import { Introduction } from '@/components/Introduction'
 
